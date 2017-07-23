@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Papo de Sistemas - SSH Key</title>
+    <link rel="icon" href="./img/ico2.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src="./img/logo.png" alt="Logo" height="60">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('./img/terminal.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Gerando uma chave SSH e adicionando em sua conta GITHUB no linux</h1>
+                        <h2 class="subheading">Aprenda a gerar uma chave SSH e autenticar seu acesso seja no GITHUB ou em seu servidor remoto</h2>
+                        <span class="meta">Publicado por <a href="#">Lucas Lagrimante</a> em 23 Julho de 2017</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Sobre SSH</h2>
+
+                    <p>Usando o protocolo SSH, você pode se conectar e autenticar servidores e serviços remotos. Com as chaves SSH, você pode se conectar ao GitHub sem fornecer seu nome de usuário ou senha em cada visita. Quando você configura o SSH, você gerará uma chave SSH e vai adiciona-la ao ssh-agent e, em seguida, adicionar a chave à sua conta do GitHub. Adicionar a chave SSH ao ssh-agent garante que sua chave SSH tenha uma camada extra de segurança através do uso de uma frase secreta.</p>
+
+                    <h2 class="section-heading">Gerando uma nova chave SSH</h2>
+
+                    <p>1 - Abra o terminal</p>
+
+                    <p>2 - Copie o texto abaixo e substitua o email por seu email</p>
+
+                    <blockquote>ssh-keygen -t rsa -b 4096 -C "seu_email@exemplo.com"</blockquote>
+
+                    <p>Isso cria uma nova chave com seu email de rótulo</p>
+
+                    <blockquote>Gerando par de chaves rsa pública / privada.</blockquote>
+
+                    <p>3 - Quando você for solicitado a "Inserir um arquivo no qual salvar a chave", pressione Enter. Isso aceita a localização padrão do arquivo.</p>
+
+                    <blockquote>Enter a file in which to save the key (/home/você/.ssh/id_rsa): [Aperte Enter]</blockquote>
+
+                    <p>4 - No terminal, digite uma frase secreta segura.</p>
+
+                    <blockquote>Enter passphrase (empty for no passphrase): [Digite a chave secreta] Enter same passphrase again: [Digite a chave secreta]</blockquote>
+
+                    <h2 class="section-heading">Adicionando sua chave SSH ao ssh-agent</h2>
+
+                    <p>2 - Copie o texto abaixo e substitua o email por seu email</p>
+
+                    <p>Antes de adicionar uma nova chave SSH ao ssh-agent para gerenciar suas chaves, você deve verificar as chaves SSH existentes e gerar uma nova chave SSH.</p>
+
+                    <p>1 - Inicie o ssh-agent em segundo plano.</p>
+
+                    <blockquote>$ eval "$(ssh-agent -s)" Agent pid 59566</blockquote>
+
+                    <p>2 - Adicione sua chave privada SSH ao ssh-agent. Se você criou sua chave com um nome diferente, ou se você estiver adicionando uma chave existente que tenha um nome diferente, substitua id_rsa no comando com o nome do arquivo de chave particular.</p>
+
+                    <blockquote>$ ssh-add ~/.ssh/id_rsa</blockquote>
+
+                    <p>3 - Adicione a chave SSH à sua conta GitHub. (Vídeo abaixo)</p>
+
+                    <video width="780" controls><source src="./video/sshkey.mp4" type="video/mp4"></video>
+                    <span class="caption text-muted">Adicionando sua chave criada à sua conta no GITHUB.</span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Papo de Sistemas 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
