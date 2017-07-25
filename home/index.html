@@ -49,15 +49,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">Sobre Nós</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contato</a>
-                    </li>
+                    <nav class="breadcrumb" style="background-color: #3CB371; opacity: 0.7;">
+                            <li><a class="breadcrumb-item" href="index.html" style="color:aqua">Home</a></li>
+                            <li class="breadcrumb-item"><a href="about.html">Sobre Nós</a></li>
+                            <li><a class="breadcrumb-item" href="contact.html">Contato</a></li>
+                    </nav>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -149,7 +145,18 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <h2>Mapa do Site</h2>
+                    <ul>
+                        <li><a rel="nofollow" rel="noreferrer" href="./index.html">Home</a></li>
+                        <li><a rel="nofollow" rel="noreferrer" href="./about.html">Sobre nós</a></li>
+                        <li><a rel="nofollow" rel="noreferrer" href="./contact.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <br>
                     <ul class="list-inline text-center">
                         <li>
                             <a href="#">
@@ -176,8 +183,9 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Papo de Sistemas 2017</p>
+                    <p class="copyright text-right">Copyright &copy; Papo de Sistemas 2017</p>
                 </div>
+                <div class="col-md-3"></div>
             </div>
         </div>
     </footer>

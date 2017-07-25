@@ -3,6 +3,10 @@
   outline: none;
 }
 
+.ativo breadcrumb-item{
+    color: aqua;
+}
+
 .pular:link {
     color: black;
 }
