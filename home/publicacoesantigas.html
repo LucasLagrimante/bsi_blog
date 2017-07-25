@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Papo de Sistemas - SSH Key</title>
+    <title>Papo de Sistemas - Blog</title>
     <link rel="icon" href="./img/ico2.ico" type="image/x-icon" />
 
     <!-- Bootstrap Core CSS -->
@@ -79,71 +79,43 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('./img/terminal.png')">
+    <header class="intro-header" style="background-image: url('./img/old-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Gerando uma chave SSH e adicionando em sua conta GITHUB no linux</h1>
-                        <h2 class="subheading">Aprenda a gerar uma chave SSH e autenticar seu acesso seja no GITHUB ou em seu servidor remoto</h2>
-                        <span class="meta">Publicado por <a href="#">Lucas Lagrimante</a> em 23 Julho de 2017</span>
+                    <div class="site-heading">
+                        <h1>Publicações Antigas</h1>
+                        <hr class="small">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Post Content -->
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <h2 class="section-heading">Sobre SSH</h2>
-
-                    <p>Usando o protocolo SSH, você pode se conectar e autenticar servidores e serviços remotos. Com as chaves SSH, você pode se conectar ao GitHub sem fornecer seu nome de usuário ou senha em cada visita. Quando você configura o SSH, você gerará uma chave SSH e vai adiciona-la ao ssh-agent e, em seguida, adicionar a chave à sua conta do GitHub. Adicionar a chave SSH ao ssh-agent garante que sua chave SSH tenha uma camada extra de segurança através do uso de uma frase secreta.</p>
-
-                    <h2 class="section-heading">Gerando uma nova chave SSH</h2>
-
-                    <p>1 - Abra o terminal</p>
-
-                    <p>2 - Copie o texto abaixo e substitua o email por seu email</p>
-
-                    <blockquote>ssh-keygen -t rsa -b 4096 -C "seu_email@exemplo.com"</blockquote>
-
-                    <p>Isso cria uma nova chave com seu email de rótulo</p>
-
-                    <blockquote>Gerando par de chaves rsa pública / privada.</blockquote>
-
-                    <p>3 - Quando você for solicitado a "Inserir um arquivo no qual salvar a chave", pressione Enter. Isso aceita a localização padrão do arquivo.</p>
-
-                    <blockquote>Enter a file in which to save the key (/home/você/.ssh/id_rsa): [Aperte Enter]</blockquote>
-
-                    <p>4 - No terminal, digite uma frase secreta segura.</p>
-
-                    <blockquote>Enter passphrase (empty for no passphrase): [Digite a chave secreta] Enter same passphrase again: [Digite a chave secreta]</blockquote>
-
-                    <h2 class="section-heading">Adicionando sua chave SSH ao ssh-agent</h2>
-
-                    <p>2 - Copie o texto abaixo e substitua o email por seu email</p>
-
-                    <p>Antes de adicionar uma nova chave SSH ao ssh-agent para gerenciar suas chaves, você deve verificar as chaves SSH existentes e gerar uma nova chave SSH.</p>
-
-                    <p>1 - Inicie o ssh-agent em segundo plano.</p>
-
-                    <blockquote>$ eval "$(ssh-agent -s)" Agent pid 59566</blockquote>
-
-                    <p>2 - Adicione sua chave privada SSH ao ssh-agent. Se você criou sua chave com um nome diferente, ou se você estiver adicionando uma chave existente que tenha um nome diferente, substitua id_rsa no comando com o nome do arquivo de chave particular.</p>
-
-                    <blockquote>$ ssh-add ~/.ssh/id_rsa</blockquote>
-
-                    <p>3 - Adicione a chave SSH à sua conta GitHub. (Vídeo abaixo)</p>
-
-                    <video width="780" controls><source src="./video/sshkey.mp4" type="video/mp4"></video>
-                    <span class="caption text-muted">Adicionando sua chave criada à sua conta no GITHUB.</span>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="./sshkey.html" target="_blank">
+                        <h2 class="post-title">
+                            Gerando uma chave SSH e adicionando em sua conta GITHUB no linux
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Aprenda a gerar uma chave SSH e autenticar seu acesso seja no GITHUB ou em seu servidor remoto
+                        </h3>
+                    </a>
+                    <p class="post-meta">Postado por <a href="#">Lucas Lagrimante</a> em 20 Julho de 2017</p>
                 </div>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="./index.html">Página Inicial &rarr;</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </article>
+    </div>
 
     <hr>
 
