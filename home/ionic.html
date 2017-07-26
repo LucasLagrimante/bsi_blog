@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Papo de Sistemas - Blog</title>
+    <title>Papo de Sistemas - Ionic</title>
     <link rel="icon" href="./img/ico2.ico" type="image/x-icon" />
 
     <!-- Bootstrap Core CSS -->
@@ -43,33 +43,17 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a href="./index.html" title="Home"><img src="./img/logo.png" alt="Logo" height="60"></a>
+                <img src="./img/logo.png" alt="Logo" height="60">
             </div>
-
-            <!--  COLORIDA - NO HARMONY
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <nav class="breadcrumb" style="background-color: #3CB371; opacity: 0.7;">
-                            <li><a class="breadcrumb-item" href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="about.html" style="color:aqua">Sobre Nós</a></li>
-                            <li><a class="breadcrumb-item" href="contact.html">Contato</a></li>
-                    </nav>
-                </ul>
-            </div>
-           -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="./index.html">>Home</a>
-                    </li>
-                    <li>
-                        <a href="./about.html">Sobre Nós</a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">Contato</a>
-                    </li>
+                    <nav class="breadcrumb" style="background-color: #3CB371; opacity: 0.7;">
+                            <li><a class="breadcrumb-item" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="about.html">Sobre Nós</a></li>
+                            <li><a class="breadcrumb-item" href="contact.html">Contato</a></li>
+                    </nav>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -79,93 +63,62 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('./img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('./img/ionic-meta.png')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Papo de Sistemas</h1>
-                        <hr class="small">
-                        <span class="subheading">Aprender nunca é demais</span>
+                    <div class="post-heading">
+                        <h1>Iniciando Com Ionic 2</h1>
+                        <h2 class="subheading">Aprenda a instalar o Ionic 2 e começar aplicações híbridas.</h2>
+                        <span class="meta">Publicado por <a href="#">Luiz Filipy</a> em 23 Julho de 2017</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="./sshkey.html">
-                        <h2 class="post-title">
-                            Gerando uma chave SSH e adicionando em sua conta GITHUB no linux
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Aprenda a gerar uma chave SSH e autenticar seu acesso seja no GITHUB ou em seu servidor remoto
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Lucas Lagrimante</a> em 23 Julho de 2017</p>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Sobre <a href="https://ionicframework.com/" target="_blank">Ionic 2</a></h2>
+
+                    
+                    <p>o IONIC, ele é um framework que usa <a href="https://angular.io/" target="_blank">Angular</a> para criar aplicações com um visual muito similar ao de apps nativos. Oferecendo diversas bibliotecas de CSS e Javascript para AngularJS, ele simplifica o desenvolvimento e ajuda a produzir apps com um visual muito agradável, sem dar muito trabalho ao desenvolvedor, além de não exigir muito conhecimento prévio, apenas HTML, CSS e Javascript.</p>
+                    
+
+                    <h2 class="section-heading">Instalando as dependências</h2>
+
+                    <p>Para criar projetos Ionic, você precisará instalar a versão mais recente da CLI e Cordova. Antes de fazer isso, você precisará de uma versão recente do <a href="https://nodejs.org/en/" target="_blank">Node.js.</a> Faça o download do instalador para Node.js 6 ou superior e, em seguida, proceda à instalação do Ionic CLI e Cordova para o desenvolvimento de aplicativos nativos:</p>
+
+                    <p>1 - Use o comando abaixo no cmd para instalar o cordova</p>
+                    <blockquote><pre>npm install -g ionic cordova
+                                </pre>
+                    </blockquote>
+                    <p>2 - Crie o seu primeiro App Ionic.</p>
+                    
+                    <blockquote><pre>ionic start MyIonicProject tutorial</pre></blockquote>
+
+                    <p>3 - Abrindo o App.</p>
+
+                    <blockquote><pre>Agora, você pode usar o comando cd dentro da pasta que foi criada.
+ para poder ter um preview do app no navegador, use o comando server.
+ 
+cd MyIonicProject/
+ionic serve</pre></blockquote>
+                <p>Agora basta abrir o navegador e você deverá ver a mensagem "welcome to your first Ionic app</p>
+
+                <p>Acesse a documentação <a href="https://ionicframework.com/docs/intro/installation/" target="_blank">aqui</a>.</p>
+                
+                    <h2 class="section-heading"></h2>
+
+                    <video width="780" controls><source src="./video/chartsJS.mp4" type="video/mp4"></video>
+                    <span class="caption text-muted">Explicação dos passos para instalação do Ionic</span>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="./redmine.html">
-                        <h2 class="post-title">
-                            Instalando o Redmine no Ubuntu passo a passo
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Aprenda a instalar e configurar um dos maiores e mais conhecidos controladores de tarefas em seu servidor
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Lucas Lagrimante</a> em 22 Julho de 2017</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="chartsjs.html">
-                        <h2 class="post-title">
-                            Criando gráficos HTML5 com canvas e Charts.js
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Aprenda a gerar gráficos responsivos para sua aplicação web
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Leonardo Smoginski</a> em 21 Julho de 2017</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="./removerfundo.html">
-                        <h2 class="post-title">
-                            Como remover o fundo de imagem usando Photoshop
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Nesse vídeo iremos mostrar as duas ferramentas mais simples para a remoção do fundo de imagens, a varinha mágica e a borracha mágica.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Matheus Souza Leão</a> em 20 Julho de 2017</p>
-                </div>
-                <div class="post-preview">
-                     <a href="ionic.html">
-                        <h2 class="post-title">
-                            Iniciando Com Ionic 2
-                        </h2>
-                        <h3 class="post-subtitle">
-                           Aprenda a instalar o Ionic 2 e começar aplicações híbridas.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Luiz Filipy</a> em 23 Julho de 2017</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="./publicacoesantigas.html">Publicacões antigas &rarr;</a>
-                    </li>
-                </ul>
             </div>
         </div>
-    </div>
-
+    </article>
     <hr>
 
     <!-- Footer -->
